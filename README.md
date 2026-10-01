@@ -30,3 +30,9 @@ The pipeline is built in Python. To install the required dependencies, run the f
 
 ```bash
 pip install pandas numpy scikit-learn imbalanced-learn matplotlib seaborn
+```
+
+## Execution and Performance Notes
+Execute the Jupyter Notebook cells in sequential order. The modeling phase relies specifically on `imblearn.pipeline.Pipeline` (rather than standard scikit-learn pipelines) to safely route synthetic SMOTE data through the cross-validation folds without data leakage.
+
+Due to the exhaustive nature of the 3D grid searches across 10 algorithms, training can be computationally expensive. The models are configured with `n_jobs=-1` to utilize all available CPU cores simultaneously. This allows modern multi-core local architectures, such as Apple M4 environments, to parallelize the cross-validation fits and drastically reduce overall execution time.

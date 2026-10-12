@@ -19,7 +19,7 @@ To prepare the data for distance-based and tree-based algorithms, the following 
 The project evaluates 10 distinct machine learning algorithms. A core focus of this study is rigorous hyperparameter tuning (Sensitivity Analysis) to maximize classification accuracy and observe the bias-variance tradeoff.
 
 Key models highlighted in the presentation include:
-* **Support Vector Machines (SVM):** Analyzed the geometric impact of adjusting regularization (`C`) and the radial basis function's radius of influence (`gamma`) on the decision boundary.
+* **Support Vector Machines (SVM):** Analyzed the geometric impact of adjusting regularization (`C`) and the radial basis function's radius of influence (`gamma`) on the decision boundary, and compared linear, RBF and polynomial kernels (tuning `degree` and `coef0` for the polynomial kernel).
 * **Gradient Boosting Classifier:** Evaluated the sequential error-correction tradeoff by visualizing `learning_rate` against `n_estimators`.
 * **Logistic Regression & Naive Bayes:** Tuned regularization strength and smoothing parameters to establish calibrated, interpretable baselines.
 
